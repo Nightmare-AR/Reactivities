@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using MediatR;
 using Domain;
 using Persistance;
@@ -21,7 +17,7 @@ namespace Application.Activities
             public async Task<List<Activity>> Handle(Query request, CancellationToken cancellationToken){
                 
                 return await _context.Activities.ToListAsync();
-            }
+            } 
         }
     }
-}
+} 
